@@ -1,26 +1,21 @@
 ---
 layout: workshop      # DON'T CHANGE THIS.
-root: .               # DON'T CHANGE THIS.
-venue: "FIXME"        # brief name of host site without address (e.g., "Euphoric State University")
-address: "FIXME"      # street address of workshop (e.g., "123 Forth Street, Blimingen, Euphoria")
-country: "FIXME"      # country (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_3166-1)
-language: "FIXME"     # language (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_639-1)
-latlng: "FIXME"       # fractional latitude and longitude (e.g., "41.7901128,-87.6007318"; you can use http://www.latlong.net/)
-humandate: "FIXME"    # human-readable date (e.g., "Feb 17-18, 2020")
-humantime: "FIXME"    # human-readable time (e.g., "9:00 am - 4:30 pm")
-startdate: FIXME      # use YYYY-MM-DD format like 2015-01-01
-enddate: FIXME        # use YYYY-MM-DD format like 2015-01-02
-instructor: ["FIXME"] # list of names like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["FIXME"]     # list of names like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-contact: "FIXME"      # contact email address for workshop organizer, such as "grace@hopper.org"
-etherpad:         # optional (insert the URL for your Etherpad if you're using one)
-eventbrite:       # optional (insert the alphanumeric key for Eventbrite registration, e.g., "1234567890AB")
+carpentry: "swc"    # what kind of Carpentry (must be either "dc" or "swc")
+venue: "The River Club"        # brief name of host site without address (e.g., "Euphoric State University")
+address: "Liesbeek Parkway, Observatory, Cape Town"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
+country: "za"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1)
+language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/ISO_639-1)
+latlng: "-33.933950,18.474866"       # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use http://www.latlong.net/)
+humandate: "Oct 5-6, 2016"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+humantime: "8:30 am - 5:00 pm"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
+startdate: 2016-10-05      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
+enddate: 2016-10-06        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
+instructor: ["Adrianna Pińska, Peter van Heusden"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+helper: ["TBA"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+contact: "swc@za.pycon.org"      # contact email address for host, lead instructor, or whoever else is handling questions
 ---
 
-
 <!-- See instructions in the comments below for how to edit specific sections of this workshop template. -->
-
-
 
 <!--
   HEADER
@@ -48,12 +43,6 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
   scrolling="auto">
 </iframe>
 {% endif %}
-
-<h4>This is the workshop template.  Use it to create your own website.
-Delete this line and email the link to your workshop page to admin@software-carpentry.org.
-If this is a self organized workshop, please be sure to include any other details
-Software Carpentry staff may need to know in your email.</h4>
-
 
 <h2 id="general">General Information</h2>
 
@@ -91,7 +80,7 @@ Software Carpentry staff may need to know in your email.</h4>
   <strong>Who:</strong>
   The course is aimed at graduate students and other researchers.
   <strong>You don't need to have any previous knowledge of the tools that will
-    be presented at the workshop.</strong>
+    be presented at the workshop.</strong> We will be teaching beginner-level material suitable for programming novices. We invite researchers with more programming experience to sign up as <a href="http://software-carpentry.org/workshops/checklists/helpers.html">helpers</a>: if you are interested, please contact us at <a href="mailto:swc@za.pycon.org">swc@za.pycon.org</a>.
 </p>
 
 <!--
@@ -133,6 +122,7 @@ Software Carpentry staff may need to know in your email.</h4>
   Modify the block below if there are any barriers to accessibility or
   special instructions.
 -->
+<!-- check this!
 <p id="accessibility">
   <strong>Accessibility:</strong> We are committed to making this workshop
   accessible to everybody.
@@ -147,33 +137,29 @@ Software Carpentry staff may need to know in your email.</h4>
   large-print handouts are available if needed by notifying the
   organizers in advance.  If we can help making learning easier for
   you (e.g. sign-language interpreters, lactation facilities) please
-  {% if page.contact %}
-    <a href='mailto:{{page.contact}}'>get in touch</a>
-  {% else %}
-    <a href='mailto:{{site.contact}}'>get in touch</a>
-  {% endif %}
-  and we will attempt to provide them. 
+  <a href="mailto:{{page.contact}}">get in touch</a> and we will
+  attempt to provide them.
 </p>
-
+-->
 <!--
   CONTACT EMAIL ADDRESS
 
-  Display the contact email address set in the header.  If an address
-  isn't set in the header, the Software Carpentry admin address is
-  used.
+  Display the contact email address set in the configuration file.
 -->
 <p id="contact">
   <strong>Contact</strong>:
   Please mail
-  {% if page.contact %}
-    <a href='mailto:{{page.contact}}'>{{page.contact}}</a>
-  {% else %}
-    <a href='mailto:{{site.contact}}'>{{site.contact}}</a>
-  {% endif %}
-  for more information.
+  <a href="mailto:{{page.contact}}">{{page.contact}}</a> for more
+  information.
 </p>
 
 <hr/>
+
+<strong>Purchase tickets</strong>:
+
+<p>Tickets will be purchaseable through Quicket. Watch this space!</p>
+
+</hr>
 
 <!--
   SCHEDULE
@@ -187,28 +173,28 @@ Software Carpentry staff may need to know in your email.</h4>
 <!-- DO NOT EDIT SURVEY LINKS -->
 <p><em>Surveys</em></p>
 <p>Please be sure to complete these surveys before and after the workshop.</p>
-<p><a href='{{ site.swc_pre_survey }}{{ site.github.project_title }}'>Pre-workshop Survey</a></p>
-<p><a href='{{ site.swc_post_survey }}{{ site.github.project_title }}'>Post-workshop Survey</a></p>
+<p><a href="{{ site.pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
+<p><a href="{{ site.post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
 
 <div class="row">
   <div class="col-md-6">
-    <h3>Day 1</h3>
+    <h3>Wednesday</h3>
     <table class="table table-striped">
-      <tr> <td>09:00</td>  <td>Automating tasks with the Unix shell</td> </tr>
+      <tr> <td>09:00</td>  <td>Introduction to Python (I)</td> </tr>
       <tr> <td>10:30</td> <td>Coffee</td> </tr>
       <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td>Building programs with Python</td> </tr>
+      <tr> <td>13:00</td>  <td>Introduction to Python (II)</td> </tr>
       <tr> <td>14:30</td>  <td>Coffee</td> </tr>
       <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
     </table>
   </div>
   <div class="col-md-6">
-    <h3>Day 2</h3>
+    <h3>Thursday</h3>
     <table class="table table-striped">
       <tr> <td>09:00</td>  <td>Version control with Git</td> </tr>
       <tr> <td>10:30</td>  <td>Coffee</td> </tr>
       <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td>Managing data with SQL</td> </tr>
+      <tr> <td>13:00</td>  <td>Automation with the Unix shell</td> </tr>
       <tr> <td>14:30</td>  <td>Coffee</td> </tr>
       <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
     </table>
@@ -268,7 +254,7 @@ Software Carpentry staff may need to know in your email.</h4>
       <li>Looping over files</li>
       <li>Creating and running shell scripts</li>
       <li>Finding things</li>
-      <li><a href="{{site.swc_githubio}}/shell-novice/reference.html">Reference...</a></li>
+      <li><a href="{{site.swc_github_io}}/shell-novice/reference/">Reference...</a></li>
     </ul>
   </div>
   <div class="col-md-6">
@@ -281,7 +267,7 @@ Software Carpentry staff may need to know in your email.</h4>
       <li>Loops and conditionals</li>
       <li>Defensive programming</li>
       <li>Using Python from the command line</li>
-      <li><a href="{{site.swc_githubio}}/python-novice-inflammation/reference.html">Reference...</a></li>
+      <li><a href="{{site.swc_github_io}}/python-novice-inflammation/reference/">Reference...</a></li>
     </ul>
   </div>
   <!--
@@ -293,7 +279,7 @@ Software Carpentry staff may need to know in your email.</h4>
       <li>Creating and using functions</li>
       <li>Loops and conditionals</li>
       <li>Using R from the command line</li>
-      <li><a href="{{site.swc_githubio}}/r-novice-inflammation/reference.html">Reference...</a></li>
+      <li><a href="{{site.swc_github_io}}/r-novice-inflammation/reference/">Reference...</a></li>
     </ul>
   </div>
   -->
@@ -306,7 +292,7 @@ Software Carpentry staff may need to know in your email.</h4>
       <li>Creating and using functions</li>
       <li>Loops and conditionals</li>
       <li>Defensive programming</li>
-      <li><a href="{{site.swc_githubio}}/matlab-novice-inflammation/reference.html">Reference...</a></li>
+      <li><a href="{{site.swc_github_io}}/matlab-novice-inflammation/reference/">Reference...</a></li>
      </ul>
    </div>
    -->
@@ -324,10 +310,10 @@ Software Carpentry staff may need to know in your email.</h4>
       <li>Resolving conflicts</li>
       <li>Open licenses</li>
       <li>Where to host work, and why</li>
-      <li><a href="{{site.swc_githubio}}/git-novice/reference.html">Reference...</a></li>
+      <li><a href="{{site.swc_github_io}}/git-novice/reference/">Reference...</a></li>
     </ul>
   </div>
-  <div class="col-md-6">
+<!--  <div class="col-md-6">
     <h3 id="syllabus-sql">Managing Data with SQL</h3>
     <ul>
       <li>Reading and sorting data</li>
@@ -338,9 +324,9 @@ Software Carpentry staff may need to know in your email.</h4>
       <li>Combining information from multiple tables using <code>join</code></li>
       <li>Creating, modifying, and deleting data</li>
       <li>Programming with databases</li>
-      <li><a href="{{site.swc_githubio}}/sql-novice-survey/reference.html">Reference...</a></li>
+      <li><a href="{{site.swc_github_io}}/sql-novice-survey/reference/">Reference...</a></li>
     </ul>
-  </div>
+  </div>-->
 </div>
 
 <hr/>
@@ -609,8 +595,8 @@ Software Carpentry staff may need to know in your email.</h4>
       We will teach Python using the IPython notebook, a programming environment
       that runs in a web browser. For this to work you will need a reasonably
       up-to-date browser. The current versions of the Chrome, Safari and
-      Firefox browsers are all <a
-      href='http://ipython.org/ipython-doc/2/install/install.html#browser-compatibility'>supported</a>
+      Firefox browsers are all
+      <a href="http://ipython.org/ipython-doc/2/install/install.html#browser-compatibility">supported</a>
       (some older browsers, including Internet Explorer version 9
       and below, are not).
     </p>
@@ -671,7 +657,7 @@ Software Carpentry staff may need to know in your email.</h4>
   </p>
 -->
 </div> <!-- End of 'Python' section. -->
-
+<!--
 <div id="r"> <!-- Start of 'R' section. -->
   <h3>R</h3>
 
@@ -755,7 +741,7 @@ Software Carpentry staff may need to know in your email.</h4>
     <a href="https://github.com/ContinuumIO/anaconda-issues/issues/307">without support to <code>readline</code></a>.
     Instructors will provide a workaround for it if needed.</strong></p>
 </div> <!-- End of 'SQLite' section. -->
-
+-->
 <!--
   Uncomment this section if you are using our virtual machine.
 
